@@ -1,0 +1,40 @@
+import os
+import sys
+import unittest
+from tempfile import 
+    NamedTemporaryFile,
+    mkdtemp,
+    gettempdir
+
+import tempfile
+import struct
+
+from pydub import AudioSegment
+from pydub.audio_segment import extract_wav_headers
+from pydub.utils import 
+    db_to_float,
+    ratio_to_db,
+    make_chunks,
+    mediainfo,
+    get_encoder_name,
+    get_supported_decoders,
+    get_supported_encoders,
+
+from pydub.exceptions import 
+    InvalidTag,
+    InvalidID3TagVersion,
+    InvalidDuration,
+    CouldntDecodeError,
+    MissingAudioParameter,
+
+from pydub.silence import 
+    detect_silence,
+    split_on_silence,
+
+from pydub.generators import 
+    Sine,
+    Square, 
+    Pulse,
+    Triangle,
+    Sawtooth,
+    WhiteNoise,
